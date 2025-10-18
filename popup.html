@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>AI API 调用器</h1>
+    
+    <div class="card">
+      <div class="form-group">
+        <label for="model-select">选择大模型:</label>
+        <select id="model-select">
+          <option value="gpt-3.5-turbo">GPT-3.5 Turbo (OpenAI)</option>
+          <option value="gpt-4">GPT-4 (OpenAI)</option>
+          <option value="claude-3-sonnet">Claude 3 Sonnet (Anthropic)</option>
+          <option value="claude-3-haiku">Claude 3 Haiku (Anthropic)</option>
+          <option value="gemini-pro">Gemini Pro (Google)</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="prompt-input">输入提示词:</label>
+        <textarea id="prompt-input" placeholder="请输入您的问题或指令..."></textarea>
+      </div>
+      
+      <button id="send-btn" class="btn">发送请求</button>
+      <button id="options-btn" class="btn btn-secondary">设置 API 密钥</button>
+      
+      <div class="loading" id="loading">
+        <div class="spinner"></div>
+        <div>正在请求 AI 接口...</div>
+      </div>
+      
+      <div class="error" id="error-message"></div>
+      
+      <div class="form-group">
+        <label>AI 响应:</label>
+        <div class="response-area" id="response-area">等待请求...</div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
