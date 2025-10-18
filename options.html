@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>API 密钥设置</h1>
+    
+    <div class="card">
+      <div class="form-group">
+        <label for="openai-key">OpenAI API 密钥:</label>
+        <input type="password" id="openai-key" placeholder="sk-...">
+        <div class="small-text">
+          获取地址: <a href="https://platform.openai.com/api-keys" target="_blank">https://platform.openai.com/api-keys</a>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label for="anthropic-key">Anthropic API 密钥:</label>
+        <input type="password" id="anthropic-key" placeholder="sk-ant-...">
+        <div class="small-text">
+          获取地址: <a href="https://console.anthropic.com/" target="_blank">https://console.anthropic.com/</a>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label for="google-key">Google AI API 密钥:</label>
+        <input type="password" id="google-key" placeholder="AIza...">
+        <div class="small-text">
+          获取地址: <a href="https://makersuite.google.com/app/apikey" target="_blank">https://makersuite.google.com/app/apikey</a>
+        </div>
+      </div>
+      
+      <div class="flex">
+        <button id="save-btn" class="btn flex-1">保存设置</button>
+        <button id="reset-btn" class="btn btn-secondary">重置</button>
+      </div>
+      
+      <div class="success" id="success-message"></div>
+    </div>
+    
+    <div class="card">
+      <h3>使用说明</h3>
+      <ul style="padding-left: 20px; margin-top: 10px;">
+        <li>至少需要配置一个 API 密钥才能使用对应的模型</li>
+        <li>API 密钥仅存储在您的浏览器本地，不会上传到任何服务器</li>
+        <li>使用扩展前请确保您有相应 API 的调用额度</li>
+        <li>不同模型的定价和速率限制各不相同，请参考官方文档</li>
+      </ul>
+    </div>
+  </div>
+  
+  <script src="options.js"></script>
+</body>
+</html>
